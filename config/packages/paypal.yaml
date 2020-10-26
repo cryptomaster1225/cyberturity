@@ -1,0 +1,18 @@
+services:
+    PayPalCheckoutSdk\Core\SandboxEnvironment:
+        arguments:
+            - '%env(PAYPAL_CLIENT_ID)%'
+            - '%env(PAYPAL_CLIENT_SECRET)%'
+
+    PayPalCheckoutSdk\Core\ProductionEnvironment:
+        arguments:
+            - '%env(PAYPAL_CLIENT_ID)%'
+            - '%env(PAYPAL_CLIENT_SECRET)%'
+
+#    PayPalCheckoutSdk\Core\PayPalHttpClient:
+#        arguments:
+#            - '@PayPalCheckoutSdk\Core\SandboxEnvironment'
+
+    PayPalCheckoutSdk\Core\PayPalHttpClient:
+        arguments:
+            - '@PayPalCheckoutSdk\Core\ProductionEnvironment'

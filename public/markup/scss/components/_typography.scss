@@ -1,0 +1,46 @@
+@each $name, $value in $headings-sizes-md {
+	@include media-breakpoint-up(md) {
+		#{$name},
+		.#{$name} {
+			font-size: $value;
+		}
+	}
+}
+
+@each $name, $value in $headings-sizes-lg {
+  @include media-breakpoint-up(lg) {
+    #{$name},
+    .#{$name} {
+      font-size: $value;
+    }
+  }
+}
+
+
+/* set styles for default page links */
+a {
+  @include animate(color background opacity);
+}
+
+
+// generate classes text-weight-#{$value} to use like: text-weight-bold . SASS map $font-weights can be found in bootstrap-custom.scss
+@each $name, $value in $font-weights {
+  .font-weight-#{$name} {
+    font-weight: $value !important;
+  }
+}
+
+
+@each $color, $value in $grays {
+  .swatch-#{$color} {
+    background: $value;
+    color: color-yiq($value);
+  }
+}
+
+@each $color, $value in $colors {
+  @include text-emphasis-variant(".text-#{$color}", $value);
+  .text-#{$color} {
+    color: $value !important;
+  }
+}

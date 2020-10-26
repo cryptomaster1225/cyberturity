@@ -1,0 +1,82 @@
+home:
+    path: /
+    controller: UI\Controller\PageController::home
+
+privacy:
+    path: /privacy
+    controller: UI\Controller\PageController::privacy
+
+terms:
+    path: /terms-of-use
+    controller: UI\Controller\PageController::terms
+
+info:
+    path: /start
+    controller: UI\Controller\PaymentController::info
+
+order:
+    path: /order
+    controller: UI\Controller\PaymentController::order
+
+order_apply:
+    path: /discount
+    methods: POST
+    controller: UI\Controller\PaymentController::discount
+
+order_cancel:
+    path: /cancel
+    controller: UI\Controller\PaymentController::cancel
+
+order_result:
+    path: /result
+    controller: UI\Controller\PaymentController::result
+
+paypal_webhook:
+    path: /paypal-webhook
+    controller: UI\Controller\PaymentController::paypalWebhook
+
+login:
+    path: /login
+
+logout:
+    path: /logout
+
+auth_login:
+    path: /auth/login
+    controller: UI\Controller\Admin\AuthController::login
+
+admin_dashboard:
+    path: /admin
+    controller: UI\Controller\Admin\DashboardController
+
+admin_product_list:
+    path: /admin/products
+    controller: UI\Controller\Admin\ProductController::collection
+
+admin_product_create:
+    path: /admin/products/create
+    controller: UI\Controller\Admin\ProductController::create
+
+admin_product_edit:
+    path: /admin/products/{id}/edit
+    controller: UI\Controller\Admin\ProductController::edit
+
+admin_product_delete:
+    path: /admin/products/{id}/delete
+    controller: UI\Controller\Admin\ProductController::delete
+
+admin_discount_list:
+    path: /admin/discounts
+    controller: UI\Controller\Admin\DiscountController::collection
+
+admin_discount_create:
+    path: /admin/discounts/create
+    controller: UI\Controller\Admin\DiscountController::create
+
+admin_discount_edit:
+    path: /admin/discounts/{id}/edit
+    controller: UI\Controller\Admin\DiscountController::edit
+
+admin_discount_delete:
+    path: /admin/discounts/{id}/delete
+    controller: UI\Controller\Admin\DiscountController::delete

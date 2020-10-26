@@ -1,0 +1,112 @@
+{% extends 'base.twig' %}
+
+{% block title %}Cyberturity® | Step 1 – Licence Details{% endblock %}
+
+{% block content %}
+    <main id="main">
+        <div class="cyber-block text-dark pt-50 pt-md-100 pb-65">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-11">
+                        <div class="px-xl-30">
+                            <div class="form-content shadow  bg-white pb-50 pb-md-90">
+                                <div class="heading-title d-flex bg-primary text-white text-uppercase p-15">
+                                    <div class="middle-content d-flex justify-content-center align-items-center text-center w-100">
+                                        <strong class="title">Complete the 3 steps - submit your payment - and you’re ready to go!</strong>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8 col-lg-6">
+                                        <div class="pt-25 px-15 px-md-0">
+                                            {{ form_start(form, {attr: {class: 'billing-form'}}) }}
+                                                <div class="step-holder overflow-hidden position-relative">
+                                                    <ol class="step-list text-gray-light d-flex justify-content-between  text-center list-unstyled mb-50">
+                                                        <li class="active">
+                                                            <span>License</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Billing details</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Summary</span>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                                <div class="heading text-center mb-25 mb-md-50">
+                                                    <div class="icon-holder mb-10">
+                                                        <span class="icon-file"></span>
+                                                    </div>
+                                                    <h2>License details</h2>
+                                                </div>
+                                                <div class="row mx-md-n12">
+                                                    <div class="col-md-9 px-md-12">
+                                                        {{ form_row(form.product) }}
+                                                    </div>
+                                                    <div class="col-md-3 px-md-12">
+                                                        {{ form_row(form.quantity) }}
+                                                    </div>
+                                                </div>
+                                                <div class="row mx-md-n12">
+                                                    <div class="col-md-9 px-md-12">
+                                                        {{ form_row(form.discountCode) }}
+                                                    </div>
+                                                    <div class="col-md-3 px-md-12 align-self-md-end">
+                                                        <div class="form-group">
+                                                            {{ form_widget(form.apply, {attr: {class: 'btn-primary d-block'}}) }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span data-discount-validation class="text-danger text-uppercase d-none mb-30">CODE NOT VALID</span>
+                                                <span data-discount-error class="text-danger text-uppercase d-none mb-30"></span>
+
+                                                <ul class="billing-list list-unstyled mb-35">
+                                                    <li class="mb-9">
+                                                        <div class="row mx-n12">
+                                                            <div class="col-8 px-12">
+                                                                <span class="text-dark-gray">Subtotal:</span>
+                                                            </div>
+                                                            <div class="col-4 px-12 text-right">
+                                                                <strong data-subtotal>$0</strong>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mb-9">
+                                                        <div class="row mx-n12">
+                                                            <div class="col-8 px-12">
+                                                                <span class="text-dark-gray">Discount:</span>
+                                                            </div>
+                                                            <div class="col-4 px-12 text-right">
+                                                                <strong class="text-danger font-weight-bold" data-discount-result>$0</strong>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="mt-30 border-top pt-25">
+                                                        <div class="row mx-n12">
+                                                            <div class="col-8 px-12">
+                                                                <span>Total:</span>
+                                                            </div>
+                                                            <div class="col-4 px-12 text-right mt-n6">
+                                                                <strong class="h2 font-weight-bold text-dark" data-total>$595</strong>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="pt-15">
+                                                    {{ form_widget(form.submit, {attr: {class: 'btn-primary w-100 text-center p-15'}}) }}
+                                                </div>
+                                            {{ form_end(form) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('markup/js/discount.js') }}" defer></script>
+{% endblock %}

@@ -1,0 +1,129 @@
+.navigation  {
+	.navbar-brand {
+		width: 207px;
+
+		@include media('screen', '>=tablet') {
+			width: 225px;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.navbar-toggler {
+		width: 16px;
+		padding: 0;
+		height: 13px;
+		z-index: 99;
+		right: 0;
+		top: 2px;
+		border: 0;
+		margin: 0;
+
+		&:not(.collapsed) {
+			&:before,
+			&:after,
+			span {
+				left: -4px;
+				right: -4px;
+			}
+
+			&:before,
+			&:after {
+				transform: rotate(45deg);
+				top: 50%;
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+
+			span {
+				opacity: 0
+			}
+		}
+
+		&:before,
+		&:after,
+		span {
+			background: $white;
+			position: absolute;
+			top: 5px;
+			left: 0;
+			right: 0;
+			height: 3px;
+			transition: transform 200ms linear, left 200ms linear, right 200ms linear;
+		}
+
+		&:before,
+		&:after{
+			content: '';
+			top: 0;
+		}
+
+		&:after{
+			top: auto;
+			bottom: 0;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover{
+			opacity: .9;
+		}
+	}
+
+	.btn {
+		width: 100%;
+
+		@include media('screen', '>=tablet') {
+			padding: 39px 61px 38px;
+			width: auto;
+		}
+	}
+}
+
+#nav {
+	position: absolute;
+	top: 44px;
+	left: -15px;
+	right: -15px;
+	background: $white;
+	z-index: 99;
+
+	@include media('screen', '>=tablet') {
+		position: static;
+		background-color: transparent;
+	}
+}
+
+.navbar-nav {
+	li {
+		>a {
+			color: #292829;
+			display: block;
+			padding: 8px 15px;
+
+			@include media('screen', '>=tablet') {
+				color: $white;
+				padding: 0;
+			}
+
+			&:hover {
+				text-decoration: none;
+				background: $blue;
+				color: #fff;
+				@include media('screen', '>=tablet') {
+					color: $blue;
+					background-color: transparent;
+				}
+
+			}
+		}
+	}
+}
+

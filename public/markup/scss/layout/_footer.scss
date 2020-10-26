@@ -1,0 +1,66 @@
+#footer {
+	background-color: #373F4A;
+	color: #D8D9DA;
+	font-size: rem-calc(13px);
+	line-height: 1.77;
+
+	@include media('screen', '>=tablet') {
+		font-size: rem-calc(16px);
+		line-height: 1.19;
+		
+	}
+
+	.container {
+		@include media('screen', '>=widescreen') {
+			max-width: 1410px;
+		}
+	}
+
+	.title {
+		color: #959495;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	address {
+		margin-bottom: 0;
+	}
+}
+
+.footer-holder {
+
+	a {
+		color: #D8D9DA;
+		&:hover {
+
+		}
+	}
+}
+
+
+.doc {
+	color: #93979E;
+	font-size: 11px;
+	line-height: 2.09;
+
+	li {
+		display: inline;
+		+li {
+			&:before {
+				content: '|';
+				display: inline-block;
+				vertical-align: top;
+				margin: 0 9px 0 10px;
+			}
+		}
+
+		a {
+			display: inline-block;
+			vertical-align: top;
+			color: #93979E;
+		}
+	}
+}

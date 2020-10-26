@@ -1,0 +1,72 @@
+{% extends 'base.twig' %}
+
+{% block title %}Cyberturity® | Get Started{% endblock %}
+
+{% block content %}
+    <main id="main">
+        <div class="cyber-block text-dark pt-50 pt-md-100 pb-65">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-11">
+                        <div class="px-xl-30">
+                            <div class="bg-white shadow pb-50 pb-md-75">
+                                <div class="bg-primary text-white pt-30 pt-md-55 px-15 px-lg-65 mb-60 overflow-hidden">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h1 class="h3 text-uppercase mb-25">FOR BOARDS, <br>CFO’s & DECISION MAKERS</h1>
+                                            <div class="text-content position-relative">
+                                                <p><strong class=" text-uppercase d-block">36 PAGE, PLAIN ENGLISH</strong> Consultant style report tailored <br> for your business.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="img-holder mx-n15 mx-lg-n65 position-relative">
+                                                <img src="{{ asset('markup/images/img04.png') }}" alt="image description" width="920" height="481">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-15 px-lg-65 text-gray-lighten book-info">
+                                    <div class="row justify-content-between mb-30 mb-lg-65">
+                                        <div class="col-md-6 pb-30 pb-md-0">
+                                            <h2 class="title font-weight-bold d-block mb-15 mb-md-30">If you are managing a cyber security<br> program, no matter how big or small,<br>Cyberturity® is made for you!</h2>
+                                            <div class="small-text">
+                                                <p>
+                                                    No business can afford to waste time, money or resources. One of the biggest challenges SMBs have when managing their cyber security program budget is over investing in certain areas and leaving gaps in others.
+                                                </p>
+                                                <p>
+                                                    Cyberturity® is vendor neutral and focuses on what YOU need and not what VENDORS want you to buy! It is not your typical FREE “vendor” cyber assessment that ultimately has you buying more products that you probably don’t need.
+                                                </p>
+                                                <p>
+                                                    Cyberturity® helps you maximise your ROI and improve your cyber resilience. That is why it costs you just a little up front. Our cyber maturity assessments are frequently compared to similar Big 4 engagements that cost 10x or more!
+                                                </p>
+                                                <p>
+                                                    We look forward to being your Trusted Partner!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-5 border-md-left-0 mr-lg-12">
+                                            <div class="pl-lg-45 border-top border-md-top-0 pt-30 pt-md-0">
+                                                <strong class="text-dark d-block text-uppercase mb-15 mb-md-40">Your Cyberturity® 360 Subscription includes:</strong>
+                                                <ul class="list list-unstyled mb-12">
+                                                    <li>Cyberturity® Secure Dashboard</li>
+                                                    <li>Cyberturity® 360 Maturity Assessment mapped to 4 leading CSF’s</li>
+                                                    <li>Cyberturity® 360 Scorecard Report for a quick snapshot view</li>
+                                                    <li>Cyberturity® 360 Maturity Assessment Report for boards & senior leaders</li>
+                                                </ul>
+                                                <strong class="price text-uppercase mb-2 d-block">US${{ product.price|number_format(2) }}</strong>
+                                                <span class="d-block text-uppercase text-gray-light">+ tax if applicable</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-holder mx-auto w-100">
+                                        <a href="{{ path('order') }}" class="btn btn-primary p-15 d-block">purchase now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

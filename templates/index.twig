@@ -1,0 +1,482 @@
+{% extends 'base.twig' %}
+
+{% block title %}Cyberturity&reg; | “Best in Class” Cyber Maturity Assessment{% endblock %}
+
+{% block content %}
+    <main id="main">
+        <section class="banner d-flex text-white" style="background-image: url({{ asset('markup/images/img01.jpg') }});">
+            <div class="middle-content py-130 py-md-50  d-flex align-items-center w-100">
+                <div class="container">
+                    <div class="text-uppercase mb-55 mb-md-100">
+                        <span class="h3 d-block mb-10">01 EVALUATE</span>
+                        <h1>Maximise your <span class="d-block text-primary">cyber Investment</span></h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 mb-35 mb-md-0">
+                            <div class="img-holder pr-md-45 pr-xl-70">
+                                <img src="{{ asset('markup/images/img02.png') }}" alt="image description" width="709" height="470">
+                            </div>
+                        </div>
+                        <div class="col-md-5 pt-md-100">
+                            <div class="text-holder pl-md-15 pl-xl-35">
+                                <strong class="title d-block text-uppercase mb-5">Fast. Low Cost. Plain English.
+                                </strong>
+                                <p>Quickly identify your gaps so that you can optimise your ROI and improve your
+                                    resilience. Ideal for boards, CFO's and
+                                    anyone responsible for managing an SMB cyber security budget.</p>
+                                <a href="#"
+                                   class="btn-watch js-video-opener d-inline-block text-white text-uppercase font-weight-medium position-relative">
+										<span class="position-absolute icon-btn-play-small">
+										</span>
+                                    Watch Video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="evaluate-section pt-55 pb-25 pt-md-95 pb-md-80 pb-lg-85">
+            <div class="container">
+                <div class="text-uppercase">
+                    <h2>Evaluate</h2>
+                </div>
+                <h3 class="title h4 font-weight-normal text-uppercase d-md-none">We mythbust the complexity
+                    surrounding cyber security with unbiased, expert opinion.</h3>
+                <div class="row pb-15 pb-md-20 pb-lg-15">
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center justify-content-center mt-n25 mb-n5">
+                            <div class="graph-block ml-xl-n45">
+                                <div class="graph-holder mx-auto">
+                                    <div id="graph"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="text-content pt-lg-35 pl-lg-35">
+                            <h3
+                                    class="title h4 font-weight-normal text-uppercase d-none d-md-block mb-md-25 mb-lg-20">
+                                We mythbust the complexity surrounding cyber security with unbiased, expert opinion.
+                            </h3>
+                            <p>Managing cyber risk is one of the greatest challenges facing all governments and
+                                organisations. High value, low cost cyber security controls exist for everyone, but
+                                organisations need better visibility into their cyber security posture to understand
+                                where and how to make these investments. </p>
+                            <p>Our cyber security maturity assessments provide the missing element not provided by
+                                security solution vendors, compliance institutions and governance authors. We help
+                                you understand your real needs and provide the basis to begin an actionable,
+                                affordable and effective risk mitigation plan.</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="info-list list-unstyled font-weight-thin row mb-0">
+                    <li class="d-flex flex-wrap mb-30 mb-lg-15 px-md-15 col-lg-4">
+                        <div class="list-icon mr-15 mr-md-25">
+                            <img src="{{ asset('markup/images/understanding-blue.svg') }}" alt="image description" width="40" height="40">
+                        </div>
+                        <div class="list-text">
+								<span
+                                        class="h6 text-uppercase font-weight-normal mb-15 mb-md-8 d-block">Understanding</span>
+                            <p>Gain a clearer understanding of your ability to utilise people, processes and
+                                technology so that you can put a coherent cyber security plan in place</p>
+                        </div>
+                    </li>
+                    <li class="d-flex flex-wrap mb-30 mb-lg-15 px-md-15 col-lg-4">
+                        <div class="list-icon mr-15 mr-md-25">
+                            <img src="{{ asset('markup/images/efficiency-blue.svg') }}" alt="image description" width="40" height="40">
+                        </div>
+                        <div class="list-text">
+								<span
+                                        class="h6 text-uppercase font-weight-normal mb-15 mb-md-8 d-block">Efficiency</span>
+                            <p>See where your cyber security investment is best made so as to avoid over investment
+                                in areas that will return less value or unnecessarily overburden your team</p>
+                        </div>
+                    </li>
+                    <li class="d-flex flex-wrap mb-30 mb-lg-15 px-md-15 col-lg-4">
+                        <div class="list-icon mr-15 mr-md-25">
+                            <img src="{{ asset('markup/images/assurance-blue.svg') }}" alt="image description" width="40" height="40">
+                        </div>
+                        <div class="list-text">
+                            <span class="h6 text-uppercase font-weight-normal mb-15 mb-md-8 d-block">Assurity</span>
+                            <p>Independent, impartial, expert advice that is designed to help you improve your cyber
+                                resilience based on your capabilities and resources </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <a id="products"></a>
+        <section class="cyberturity d-md-flex pt-80 pb-65 text-white"
+                 style="background-image: url({{ asset('markup/images/img03.jpg') }})">
+            <div class="middle-content d-md-flex w-100 align-items-center">
+                <div class="container">
+                    <div class="px-lg-75">
+                        <div class="row flex-md-row-reverse">
+                            <div class="col-md-4 col-xl-6 align-self-md-center text-center mb-25">
+                                <a href="#" class="btn-play text-white">
+                                    <span class="icon-btn-play"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-8 col-xl-6">
+                                <h2>“Best in Class” <br>Assessment</h2>
+                                <span class="title d-block font-weight-normal">Know where you stand.</span>
+                                <p>Our Hybrid Cyber Security Maturity Assessments provide a fast, holistic view of
+                                    your cyber security maturity. Our security rating scorecard provides a 360
+                                    evaluation across 8 Critical Areas required to build strong cyber
+                                    resilience. Fully customised for executive engagement, delivered digitally in
+                                    plain English, and tailored specifically for your organisation.</p>
+                                <p>Quickly and cost effectively gain a 360 understanding of what you’re doing well,
+                                    where your gaps are, and where you can most efficiently improve your cyber
+                                    resilience.</p>
+                                <ul class="list-unstyled pt-25 d-flex flex-wrap align-items-center mb-md-0">
+                                    <li class="mr-10 mr-md-35 mb-10">
+                                        <a href="#" class="btn btn-primary js-video-opener">WATCH VIDEO</a>
+                                    </li>
+                                    <li class="mr-10 mr-md-35 mb-10">
+                                        <a href="#process" class="find-more">Find out more &nbsp;></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="process py-50 pt-md-95 pb-md-105" id="process">
+            <div class="container">
+                <div class="heading text-center text-md-left text-primary mb-30 mb-md-45 text-uppercase">
+                    <h2>3 Step Process</h2>
+                </div>
+                <div class="tabset-hold">
+                    <ul class="tabset nav nav-tabs border-bottom-0" id="myTab" role="tablist">
+                        <li class="tab-1">
+                            <a href="#tab01" data-toggle="tab" class="active">
+                                <strong class="h1 d-block">01</strong>
+                                <p>Complete your Cyberturity 360 Assessment</p>
+                            </a>
+                        </li>
+                        <li class="tab-2">
+                            <a href="#tab02" data-toggle="tab">
+                                <strong class="h1 d-block">02</strong>
+                                <p>Review your Cyberturity 360 Scorecard</p>
+                            </a>
+                        </li>
+                        <li class="tab-3">
+                            <a href="#tab03" data-toggle="tab">
+                                <strong class="h1 d-block">03</strong>
+                                <p>Seek to Understand, Implement of Improve</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#assessment">
+                        <div id="watermark" class="img">
+                            <svg width="100" height="100" viewBox="0 0 120.8 120.8"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g fill="currentColor">
+                                    <path
+                                            d="m60.4 10a50.4 50.4 0 1 0 50.4 50.4 50.45 50.45 0 0 0 -50.4-50.4m0 110.8a60.4 60.4 0 1 1 60.4-60.4 60.47 60.47 0 0 1 -60.4 60.4">
+                                    </path>
+                                    <path
+                                            d="m57.9 35.4c-20.7 0-28.5 3.5-28.5 3.5l6 37.3 25.1 21.3 25.1-21.3 4.4-26.6-29.6 24.9-14.7-12.5 13.2 4.4 32.6-27.6c-1.3-.6-10-3.5-31-3.5a23.48 23.48 0 0 1 -2.6.1">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="tab-content font-weight-thin pb-md-25">
+                    <div id="tab01" class="tab-pane fade active show">
+                        <div class="row pt-25 pt-md-30">
+                            <div class="col-md-6 col-lg-5 pb-25 pb-md-0">
+                                <div class="txt font-font-thin px-md-20">
+                                    <span class="h4 font-weight-normal d-block">Simple. Quick. Effective.</span>
+                                    <p>A Cyberturity&reg; 360 Assessment delves much deeper than your technology to
+                                        give you a “whole of business” view.</p>
+                                    <p>We’ve worked with some of the world’s leading cyber security experts and
+                                        guidance frameworks to create an online maturity
+                                        assessment that gives you clear visibility and measurement across 8 critical
+                                        areas of cyber risk that you need to
+                                        manage.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-7 pt-md-25">
+                                <ul class="logo-list mx-n15 pl-lg-15">
+                                    <li class="px-15 pb-30 text-center text-md-left">
+                                        <a href="#"><img src="{{ asset('markup/images/logo-nist.png') }}"
+                                                         alt="Cybersecurity maturity assessment aligned to NIST cyber security standards and framework"
+                                                         width="135" height="52"></a>
+                                    </li>
+                                    <li class="px-15 pb-30 text-center text-md-left">
+                                        <a href="#"><img src="{{ asset('markup/images/logo-cis.png') }}"
+                                                         alt="Cybersecurity maturity assessment aligned to CIS top 20 cyber security standards and framework"
+                                                         width="180" height="65"></a>
+                                    </li>
+                                    <li class="px-15 pb-30 text-center text-md-left">
+                                        <a href="#"><img src="{{ asset('markup/images/logo-cobit.png') }}"
+                                                         alt="Cybersecurity maturity assessment aligned to ISACA Cobit 5 cyber security standards and framework"
+                                                         width="135" height="52"></a>
+                                    </li>
+                                    <li class="px-15 pb-30 text-center text-md-left">
+                                        <a href="#"><img src="{{ asset('markup/images/logo-iso.png') }}"
+                                                         alt="Cybersecurity maturity assessment aligned to ISO 27001 and ISO 27002 cyber security standards and framework"
+                                                         width="145" height="55"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab02" class="tab-pane fade">
+                        <div class="row pt-25 pt-md-30">
+                            <div class="col-md-6 col-lg-5 pb-25 pb-md-0">
+                                <div class="txt font-font-thin px-md-20">
+										<span class="h4 font-weight-normal d-block">Clear. Practical. Plain
+											English.</span>
+                                    <p>Bring the key decision makers in your organisation up to speed on your
+                                        current cyber security posture.</p>
+                                    <p>Your Cyberturity&reg; 360 Scorecard is designed to quickly synthesise your
+                                        assessment into a top-level view of your
+                                        organisation’s current cyber security across 8 critical areas of cyber risk
+                                        management: what areas you’re doing well in,
+                                        where the gaps are, and what areas you should focus on. No matter how you
+                                        plan to manage your cyber security, it’s
+                                        essential to first know where you stand.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-7 align-self-end pt-md-25 pb-65 pb-md-65">
+                                <div class="img"><img src="{{ asset('markup/images/img-laptop.png') }}" width="428" height="265"
+                                                      alt="image description"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab03" class="tab-pane fade">
+                        <div class="row pt-25 pt-md-30">
+                            <div class="col-md-6 col-lg-5 pb-25 pb-md-0">
+                                <div class="txt font-font-thin px-md-20">
+										<span class="h4 font-weight-normal d-block">
+											Useful. Informed. Decisive.
+										</span>
+                                    <p>Now you know where you stand, it’s time to act. Your Cyberturity&reg; 360
+                                        Maturity Assessment Report is the starting point.</p>
+                                    <p>Strong cyber risk management starts with well-informed strategies to maintain
+                                        your most resilient areas and quickly
+                                        address your most vulnerable gaps. Use your Cyberturity&reg; 360 Maturity
+                                        Assessment Report to prioritise your next steps,
+                                        then work with a cyber risk specialist or your internal risk team to develop
+                                        and implement your strategies.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-7 align-self-end pt-md-25 pb-65 pb-md-35">
+                                <div class="img"><img src="{{ asset('markup/images/img-books02.png') }}" width="414" height="344"
+                                                      alt="image description"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="complete-view pt-50 pt-md-105">
+            <div class="container">
+                <div class="top-block mb-50 px-md-45">
+                    <h2>A complete view</h2>
+                    <p>Cyber security is much more than technology.<br class=" d-none d-md-block">The
+                        Cyberturity&reg; 360 Assessment is “Best in Class” and covers the areas you need for a truly
+                        holistic defense.</p>
+                </div>
+                <div class="complete-details">
+                    <div class="heading mb-10 pt-25 px-15 pb-15 pt-md-30 px-md-50 pb-md-20 mx-md-n55 mb-md-35">
+                        <strong class="title">8 Critical Areas of cyber risk management</strong>
+                    </div>
+                    <ul class="view-accordion">
+                        <li class="type-1">
+                            <a href="#" class="js-opener opener">
+                                <strong class="link-title">Security <br>Culture</strong>
+                            </a>
+                            <div class="slide">
+                                <div class="h-100 overflow-auto px-20 px-sm-65 pt-20 pt-sm-50">
+                                    <div class="img-holder">
+                                        <img src="{{ asset('markup/images/ico-num-1.svg') }}" alt="image description">
+                                    </div>
+                                    <a class="close js-opener text-white d-lg-none" href="#">
+                                        <span class="icon-close"></span>
+                                    </a>
+                                    <p>Cyber security is a risk issue that spans all parts of an organisation. How
+                                        much is cyber security part of the day-to-day, living, breathing fabric of
+                                        your organisation?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="type-2">
+                            <a href="#" class="js-opener opener">
+                                <strong class="link-title">Self <br> Awareness</strong>
+                            </a>
+                            <div class="slide">
+                                <div class="h-100 overflow-auto px-20 px-sm-65 pt-20 pt-sm-50">
+                                    <div class="img-holder">
+                                        <img src="{{ asset('markup/images/ico-num-2.svg') }}" alt="image description">
+                                    </div>
+                                    <a class="close js-opener text-white d-lg-none" href="#">
+                                        <span class="icon-close"></span>
+                                    </a>
+                                    <p>Every business, no matter the size or sector, has ‘crown jewels’ or digital
+                                        assets of value to cyber criminals. How aware of your digital assets are
+                                        you, and just what you have to lose?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="type-3">
+                            <a href="#" class="js-opener opener">
+                                <strong class="link-title">External <br>Awareness</strong>
+                            </a>
+                            <div class="slide">
+                                <div class="h-100 overflow-auto px-20 px-sm-65 pt-20 pt-sm-50">
+                                    <div class="img-holder">
+                                        <img src="{{ asset('markup/images/ico-num-3.svg') }}" alt="image description">
+                                    </div>
+                                    <a class="close js-opener text-white d-lg-none" href="#">
+                                        <span class="icon-close"></span>
+                                    </a>
+                                    <p>The nature and purpose of cyber attacks is constantly evolving. How well do
+                                        you understand the cyber risk landscape – the scope, the threat, the reasons
+                                        they attack?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="type-4">
+                            <a href="#" class="js-opener opener">
+                                <strong class="link-title">Identifyling <br>Your Digital <br> Assets</strong>
+                            </a>
+                            <div class="slide">
+                                <div class="h-100 overflow-auto px-20 px-sm-65 pt-20 pt-sm-50">
+                                    <div class="img-holder">
+                                        <img src="{{ asset('markup/images/ico-num-4.svg') }}" alt="image description">
+                                    </div>
+                                    <a class="close js-opener text-white d-lg-none" href="#">
+                                        <span class="icon-close"></span>
+                                    </a>
+                                    <p>Just like an inventory of hard assets for insurance, you should list your
+                                        digital assets, who has access to them, and which are the most valuable.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="type-5">
+                            <a href="#" class="js-opener opener">
+                                <strong class="link-title">Preparing <br>to Protect</strong>
+                            </a>
+                            <div class="slide">
+                                <div class="h-100 overflow-auto px-20 px-sm-65 pt-20 pt-sm-50">
+                                    <div class="img-holder">
+                                        <img src="{{ asset('markup/images/ico-num-5.svg') }}" alt="image description">
+                                    </div>
+                                    <a class="close js-opener text-white d-lg-none" href="#">
+                                        <span class="icon-close"></span>
+                                    </a>
+                                    <p>This is where most organisations focus. While technology alone can’t deliver
+                                        cyber security, it is a critical aspect. Do you have the right tools to
+                                        protect your digital assets?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="type-6">
+                            <a href="#" class="js-opener opener">
+                                <strong class="link-title">Ability <br>to Detect <br>Intrusion</strong>
+                            </a>
+                            <div class="slide">
+                                <div class="h-100 overflow-auto px-20 px-sm-65 pt-20 pt-sm-50">
+                                    <div class="img-holder">
+                                        <img src="{{ asset('markup/images/ico-num-6.svg') }}" alt="image description">
+                                    </div>
+                                    <a class="close js-opener text-white d-lg-none" href="#">
+                                        <span class="icon-close"></span>
+                                    </a>
+                                    <p>Holistic cyber security doesn’t stop with prevention. Even the biggest and the
+                                        best get breached. How well are you set up to detect an intrusion before it
+                                        can cause serious damage?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="type-7">
+                            <a href="#" class="js-opener opener">
+                                <strong class="link-title">Ability to <br>Respond</strong>
+                            </a>
+                            <div class="slide">
+                                <div class="h-100 overflow-auto px-20 px-sm-65 pt-20 pt-sm-50">
+                                    <div class="img-holder">
+                                        <img src="{{ asset('markup/images/ico-num-7.svg') }}" alt="image description">
+                                    </div>
+                                    <a class="close js-opener text-white d-lg-none" href="#">
+                                        <span class="icon-close"></span>
+                                    </a>
+                                    <p>Reacting effectively to a breach can be the difference between going on or
+                                        going under. How well are you set up to respond to mitigate the threats and
+                                        minimise the damage.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="type-8">
+                            <a href="#" class="js-opener opener">
+                                <strong class="link-title">Ability <br>to Recover</strong>
+                            </a>
+                            <div class="slide">
+                                <div class="h-100 overflow-auto px-20 px-sm-65 pt-20 pt-sm-50">
+                                    <div class="img-holder">
+                                        <img src="{{ asset('markup/images/ico-num-8.svg') }}" alt="image description">
+                                    </div>
+                                    <a class="close js-opener text-white d-lg-none" href="#">
+                                        <span class="icon-close"></span>
+                                    </a>
+                                    <p>You’ve been breached. How do you go about rebuilding your business and your
+                                        reputation? Who tells your clients and partners? What’s your plan?</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="features pt-55 pb-15 pt-md-105 pb-md-65 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 pb-30">
+                        <div class="features-holder mx-auto">
+                            <div class="ico-holder mb-10">
+                                <img src="{{ asset('markup/images/ico-practical-blue.svg') }}"
+                                     alt="A holistic cyber security maturity assessment across the 8 critical cyber risk areas you need to manage">
+                            </div>
+                            <strong class="title d-block mb-15">Holistic and <br>practical</strong>
+                            <p>Quickly and clearly gauges the 8 Critical Areas your cyber resilience strategy should
+                                address</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pb-30">
+                        <div class="features-holder mx-auto">
+                            <div class="ico-holder mb-10">
+                                <img src="{{ asset('markup/images/ico-steps-blue.svg') }}"
+                                     alt="A simple three step cyber security evaluation of your business">
+                            </div>
+                            <strong class="title d-block mb-15">Simple three <br>step process</strong>
+                            <p>Specifically designed for business owners, boards and upper management </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pb-30">
+                        <div class="features-holder mx-auto">
+                            <div class="ico-holder mb-10">
+                                <img src="{{ asset('markup/images/ico-international-blue.svg') }}"
+                                     alt="Cyberturity delivers a customised cyber security maturity assessment built on international best practices">
+                            </div>
+                            <strong class="title d-block mb-15">International <br>Best Practice</strong>
+                            <p>Aligns with key relevant guidance from 4 of the world’s leading cyber security
+                                frameworks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+	<script src="https://d3js.org/d3.v4.js" defer></script>
+	<script src="https://player.vimeo.com/api/player.js" defer></script>
+	<script src="{{ asset('markup/js/jquery.main.js') }}" defer></script>
+{% endblock %}

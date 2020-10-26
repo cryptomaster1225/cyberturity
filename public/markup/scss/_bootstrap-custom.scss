@@ -1,0 +1,208 @@
+// custom variables and override bootstrap variables
+
+$body-bg: #fff;
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #4F4F4F ;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #BDBDBD;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #333;
+$gray-900: #212529 !default;
+$black:    #2A2B2E;
+$dark-gray: #828282;
+
+$grays: () !default;
+
+$blue:    #2484C6;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #EB5757 ;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #6FCF97;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: () !default;
+
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-lighten":$gray-200,
+    "gray-light": $gray-500,
+    "dark-gray": $dark-gray
+  ),
+  $colors
+);
+
+$primary:       $blue;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800;
+
+$theme-colors: () !default;
+
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+// Options
+
+$enable-caret:                                true !default;
+$enable-rounded:                              true !default;
+$enable-shadows:                              false !default;
+$enable-gradients:                            false !default;
+$enable-transitions:                          true !default;
+$enable-prefers-reduced-motion-media-query:   true !default;
+$enable-hover-media-query:                    false !default; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes:                         true !default;
+$enable-pointer-cursor-for-buttons:           true !default;
+$enable-print-styles:                         true !default;
+$enable-responsive-font-sizes:                false !default;
+$enable-validation-icons:                     true !default;
+$enable-deprecation-messages:                 true !default;
+
+// Spacing
+
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * 0.625),
+  2: ($spacer * 0.125),
+  3: ($spacer * 0.1875),
+  4: ($spacer * 0.25),
+  5: ($spacer * 0.3125),
+  6: ($spacer * 0.375),
+  7: ($spacer * 0.4375),
+  8: ($spacer * 0.5),
+  9: ($spacer * 0.5625),
+  10: ($spacer * 0.625),
+  12: ($spacer * 0.75),
+  15: ($spacer * 0.9375),
+  20: ($spacer * 1.25),
+  25: ($spacer * 1.5625),
+  26: ($spacer * 1.63),
+  30: ($spacer * 1.875),
+  35: ($spacer * 2.1875),
+  38: ($spacer * 2.375),
+  40: ($spacer * 2.5),
+  45: ($spacer * 2.8125),
+  50: ($spacer * 3.125),
+  55: ($spacer * 3.4375),
+  60: ($spacer * 3.75),
+  65: ($spacer * 4.0625),
+  70: ($spacer * 4.375),
+  75: ($spacer * 4.6875),
+  80: ($spacer * 5),
+  85: ($spacer * 5.3125),
+  90: ($spacer * 5.63),
+  95: ($spacer * 5.9375),
+  100: ($spacer * 6.25),
+  105: ($spacer * 6.56),
+  115: ($spacer * 7.19),
+  130: ($spacer * 8.13)
+), $spacers);
+
+$base-min-width: 320px;
+
+// This is the default html and body font-size for the base rem value.
+$rem-base: 16px;
+$font-family-base: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+$body-color: #6d6e71;
+$line-height-base: 1.5;
+
+$grid-gutter-width: 30px;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1100px,
+);
+
+// Typography
+$font-weights: (
+ 'thin': 300,
+ 'medium': 500,
+);
+
+// Grid breakpoints
+//
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$h1-font-size:                2rem;
+$h2-font-size:                1.56rem;
+$h3-font-size:                1.44rem;
+$h4-font-size:                1rem;
+$h5-font-size:                1.0625rem;
+$h6-font-size:                0.9375rem;
+  
+$headings-sizes-md: (
+  'h1': 2.875rem,
+  'h2': 2.375rem,
+  'h3': 1.75rem,
+  'h4': 1.25rem,
+);
+
+$headings-sizes-lg: (
+  'h1': 3.875rem,
+);
+
+//label 
+$label-margin-bottom: 0.625rem;
+
+//btn 
+$btn-border-radius: 0;
+
+//
+// Textual form controls
+//
+
+$input-height: 2.625rem;
+
+$input-padding-x: 0.9rem;
+$form-group-margin-bottom: 23px;
+$input-placeholder-color: $gray-200;
+$input-border-color: #E0E0E0;
+$input-color: #333;
+
+$border-color:  #BDBDBD;
+
+//box shadow
+$box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.1);

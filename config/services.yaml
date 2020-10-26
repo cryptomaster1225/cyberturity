@@ -1,0 +1,39 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    # CQRS Command Handlers
+    Application\CommandHandler\:
+        resource: '../src/Application/CommandHandler'
+        public: true
+        tags:
+            - { name: messenger.message_handler, bus: command.bus }
+
+    UI\Controller\:
+        resource: '../src/UI/Controller'
+        tags: ['controller.service_arguments']
+
+    Domain\Repository\ProductRepository: '@Infrastructure\Domain\Repository\DoctrineProductRepository'
+    Domain\Repository\OrderRepository: '@Infrastructure\Domain\Repository\DoctrineOrderRepository'
+    Domain\Repository\DiscountRepository: '@Infrastructure\Domain\Repository\DoctrineDiscountRepository'
+
+    Domain\PaginatedQuery\DiscountQuery: '@Infrastructure\Domain\PaginatedQuery\DoctrineDiscountQuery'
+    Domain\PaginatedQuery\ProductQuery: '@Infrastructure\Domain\PaginatedQuery\DoctrineProductQuery'
+
+    Domain\Service\PaymentService: ~
+    Domain\Service\DiscountService: ~
+
+    # repository
+    Infrastructure\Domain\Repository\:
+        resource: './../src/Infrastructure/Domain/Repository'
+
+    # paginated query
+    Infrastructure\Domain\PaginatedQuery\:
+        resource: './../src/Infrastructure/Domain/PaginatedQuery'
+
+    Infrastructure\Symfony\EventSubscriber\:
+        resource: './../src/Infrastructure/Symfony/EventSubscriber'
+        tags: ['kernel.event_subscriber']

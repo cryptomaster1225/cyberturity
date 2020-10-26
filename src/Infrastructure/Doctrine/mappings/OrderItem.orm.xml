@@ -1,0 +1,18 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="Domain\Model\OrderItem" table="orders_items">
+        <id name="id" type="guid" column="id">
+            <generator strategy="NONE"/>
+        </id>
+        <field name="quantity"/>
+        <field name="unitPrice" type="decimal" precision="12" scale="2"/>
+        <many-to-one field="order" target-entity="Domain\Model\Order" inversed-by="items">
+            <join-column name="order_id" on-delete="CASCADE"/>
+        </many-to-one>
+        <many-to-one field="product" target-entity="Domain\Model\Product">
+            <join-column name="product_id"/>
+        </many-to-one>
+    </entity>
+</doctrine-mapping>

@@ -1,0 +1,83 @@
+.banner {
+	background: radial-gradient(ellipse at center, #ecf0f4 0%, #e1e7ea 20%, #83909d 100%);
+	background-size: cover;
+	background-position: 50% 50%;
+	font-size: rem-calc(13px);
+	line-height: 1.38;
+	letter-spacing: 0.02em;
+	font-weight: 300;
+
+	@include media('screen', '>=tablet') {
+		font-size: 1rem;
+		line-height: 1.4;
+	}
+
+	.middle-content {
+		min-height: calc(100vh - 103px);
+	}
+
+	.h3 {
+		font-size: 1rem;
+
+		@include media('screen', '>=tablet') {
+			font-size: rem-calc(18px);
+		}
+
+		@include media('screen', '>=desktop') {
+			font-size: rem-calc(20px);
+		}
+	}
+
+	h1 {
+		line-height: 1.1;
+		font-weight: 400;
+
+		@include media('screen', '<tablet') {
+			font-size: 1.375rem;
+		}
+	}
+
+	p {
+		margin-bottom: 36px;
+		@include media('screen', '>=tablet', '<desktop') {
+			margin-bottom: 59px;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.title {
+		font-size: 1rem;
+		line-height: 1.2;
+		font-weight: 500;
+		@include media('screen', '>=tablet') {
+			font-size: 1.375rem;
+		}
+	}
+
+	.btn-watch {
+		font-size: 15px;
+		padding-left: 42px;
+		vertical-align: top;
+
+		&:hover {
+			text-decoration: none;
+			opacity: 0.6;
+		}
+
+
+		span {
+			width: 33px;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+
+		.icon-btn-play-small {
+			font-size: 32px;
+		}
+	}
+}

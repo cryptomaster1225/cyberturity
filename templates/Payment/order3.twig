@@ -1,0 +1,114 @@
+{% extends 'base.twig' %}
+
+{% block title %}Cyberturity® | Step 3 – Order Summary{% endblock %}
+
+{% block content %}
+    <main id="main">
+        <div class="cyber-block text-dark pt-50 pt-md-100 pb-65">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-11">
+                        <div class="px-xl-30">
+                            <div class="form-content shadow bg-white pb-50 pb-md-90">
+                                <div class="heading-title d-flex bg-primary text-white text-uppercase p-15">
+                                    <div class="middle-content d-flex justify-content-center align-items-center text-center w-100">
+                                        <strong class="title">Complete the 3 steps - submit your payment - and you’re ready to go!</strong>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8 col-lg-6">
+                                        <div class="pt-25 px-15 px-md-0">
+                                            {{ form_start(form, {attr: {class: 'billing-form'}}) }}
+                                                <div class="step-holder overflow-hidden position-relative">
+                                                    <ol class="step-list text-gray-light d-flex justify-content-between  text-center list-unstyled mb-50">
+                                                        <li class="success">
+                                                            <span>License</span>
+                                                        </li>
+                                                        <li class="success">
+                                                            <span>Billing details</span>
+                                                        </li>
+                                                        <li class="active">
+                                                            <span>Summary</span>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                                <div class="heading text-center mb-25 mb-md-50">
+                                                    <div class="icon-holder mb-10">
+                                                        <span class="icon-menu"></span>
+                                                    </div>
+                                                    <h2>Order Summary</h2>
+                                                </div>
+                                                <ul class="list-unstyled mb-30 border-bottom">
+                                                    <li class="mb-15 mb-md-25">
+                                                        <span class="d-block mb-9">License:</span>
+                                                        <div class="row mx-n12">
+                                                            <div class="col-8 px-12">
+                                                                <span>{{ data.quantity}} x {{ data.product.name }}</span>
+                                                            </div>
+                                                            <div class="col-4 px-12 text-right">
+                                                                <span>${{ data.product.price|number_format(2) }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    {% if data.discountCode %}
+                                                    <li class="mb-15 mb-md-25">
+                                                        <span class="d-block mb-9">Discount:</span>
+                                                        <div class="row mx-n12">
+                                                            <div class="col-8 px-12">
+                                                                <span class="text-uppercase">{{ data.discountCode }}</span>
+                                                            </div>
+                                                            <div class="col-4 px-12 text-right">
+                                                                <span class="text-danger">-${{ summary.discount|number_format(2) }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    {% endif %}
+                                                    <li class="mb-15 mb-md-25">
+                                                        <div class="row mx-n12">
+                                                            <div class="col-8 px-12">
+                                                                <strong>Total:</strong>
+                                                            </div>
+                                                            <div class="col-4 px-12 text-right">
+                                                                <strong>${{ summary.total|number_format(2) }}</strong>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class=" list-unstyled mb-20">
+                                                    <li class="mb-20">
+                                                        <strong>Billing information:</strong>
+                                                    </li>
+                                                    <li class="mb-20">
+                                                        <span class="d-block">{{ data.firstName }} {{ data.lastName }}</span>
+                                                        <a href="mailto:{{ data.email }}">{{ data.email }}</a> <br>
+                                                    </li>
+                                                    {% if data.companyName %}
+                                                    <li class="mb-20">
+                                                        {{ data.companyName }}
+                                                    </li>
+                                                    {% endif %}
+                                                    <li class="mb-20">
+                                                        <address>
+                                                            {{ data.addressLine1 }}<br>
+                                                            {% if data.addressLine2 %}{{ data.addressLine2 }}<br>{% endif %}
+                                                            {{ data.city}} {{ data.postalCode }}<br>
+                                                            {{ data.country }}
+                                                        </address>
+                                                    </li>
+                                                </ul>
+                                                <div class="pt-15">
+                                                    {{ form_widget(form.submit, {attr: {class: 'btn-primary w-100 text-center p-15'}}) }}
+                                                </div>
+                                            {{ form_end(form) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+

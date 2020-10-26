@@ -1,0 +1,328 @@
+.cyber-block {
+	position: relative;
+	z-index: 1;
+	background-color: #E5E5E5;
+	line-height: 1.13;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: #373F4A;
+		z-index: -1;
+		min-height: 282px;
+	}
+
+	.text-content {
+		font-size: rem-calc(18px);
+		line-height: 1.17;
+		position: relative;
+		z-index: 2;
+	}
+
+	.img-holder {
+		
+		pointer-events: none;
+		z-index: 1;
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		@include media('screen', '>=desktop') {
+			margin-top: -169px;
+		}
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.title {
+		font-size: rem-calc(18px);
+	}
+
+	.heading {
+
+		.icon-holder {
+			color: #000;
+			font-size: rem-calc(24px);
+		}
+
+		h2 {
+			line-height: 1.17;
+			font-weight: 400;
+		}
+
+		&.heading--icon {
+			position: relative;
+
+			.icon-holder {
+				@include media('screen', '>=tablet') {
+					position: absolute;
+					left: -47px;
+					top: 3px;
+				}
+			}
+		}
+	}
+
+	.heading-title {
+		.middle-content {
+			min-height: 67px;
+		}
+	}
+}
+
+.form-content {
+
+	.middle-wrapper {
+		min-height: 250px;
+		@include media('screen', '>=tablet') {
+			min-height: 384px;
+		}
+	}
+
+	.icon-block {
+		font-size: rem-calc(66px);
+	}
+	
+	.h2,
+	h2 {
+		font-size: rem-calc(24px);
+	}
+
+	ul {
+		a {
+			color: $gray-800;
+		}
+	}
+
+	.form-group {
+		.btn {
+			min-height: 42px;
+			min-width: 0;
+			width: 100%;
+
+			&.btn-primary {
+				color: #F2F2F2;	
+			}
+		}
+
+		input[type="submit"] {
+			min-width: 0;
+		}
+	}
+
+	input[type="submit"] {
+		min-width: 211px;
+	}
+
+	label {
+		color: #333;
+	}
+}
+
+.success-message {
+	h2 {
+		font-size: rem-calc(24px);
+		margin-bottom: 26px;
+		font-weight: 400;
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+
+	@include media('screen', '>=desktop') {
+		min-height: 523px;
+	}
+
+	.text-block {
+		min-height: 200px;
+	}
+}
+
+.step-holder {
+	position: relative;	
+	z-index: 1;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 36px;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: #E0E0E0;
+		width:100%;
+	}
+}
+
+.step-list {
+	counter-reset: my-counter;
+	font-size: rem-calc(9px);
+	line-height: 1.2;
+	z-index: 1;
+	position: relative;	
+
+
+	li {
+		counter-increment: my-counter;
+		position: relative;
+		z-index: 2;
+		padding-left: 0;
+
+		&:before {
+			display: none;	
+		}
+
+
+		&:first-child {
+			span {
+				padding-left: 0;
+				&:after {
+					right: 25px;
+				}
+			}
+		}
+
+		&:last-child {
+			span {
+				padding-right: 0;
+				&:after {
+					left: 25px;
+				}
+			}
+		}
+
+		span {
+			background-color: $white;
+			display: block;
+			padding-left: 25px;
+			padding-right: 25px;
+			max-width: 105px;
+
+			&:before {
+				content: counter(my-counter);
+				display: block;
+				font-size: rem-calc(18px);
+				line-height: 1.2;
+				margin-bottom: 8px;
+				@include animate(opacity);
+			}
+
+			&:after {
+				@extend %icomoon;
+				content: $icon-check-mark;
+				top: 3px;
+				left: 0;
+				right: 0;
+				text-align: center;
+				font-size: rem-calc(16px);
+				position: absolute;
+				opacity: 0;
+				@include animate(opacity);
+			}
+		}
+
+		&.success {
+			color: #6FCF97;
+
+			span {
+				&:before {
+					opacity: 0;
+				}
+
+				&:after {
+					display: block;
+					opacity: 1;
+				}
+			}
+
+		}
+
+		&.active {
+			color: #000;
+		}
+	}
+}
+
+.billing-list {
+	line-height: 1.19;
+}
+
+.book-info {
+	
+	.border-top,
+	.border-left {
+		border-color: #E0E0E0 !important;
+	}
+
+	.border-md-top-0 {
+		@include media('screen', '>=tablet') {
+			border-top: none !important
+		}
+	}
+
+	.border-md-left-0 {
+		@include media('screen', '>=tablet') {
+			border-left: 1px solid #E0E0E0;
+		}
+	}
+
+	.title {
+		line-height: 1.13;
+		color: #000;
+	}
+
+	.small-text {
+		font-size: rem-calc(14px);
+		line-height: 1.29;
+	}
+
+	.text-dark {
+		color: #000 !important;
+	}
+
+	.price {
+		font-size: 36px;
+		line-height: 1.14;
+		color: #2A2B2E;
+	}
+
+	.btn-holder {
+		max-width: 448px;
+	}
+}
+
+.list {
+	font-size: rem-calc(15px);
+	line-height: 1.13;
+	li {
+		padding-left: 33px;
+		padding-bottom: 25px;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			top: 4px;
+			left: 5px;
+			content: $icon-check-mark-thin;
+			@extend %icomoon;
+			color: #6FCF97;
+			font-size: 10px;
+		}
+	}
+}
+
+input[type="number"] {
+  	-moz-appearance: textfield;
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+}

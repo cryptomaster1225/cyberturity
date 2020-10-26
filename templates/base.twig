@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Cyberturity®{% endblock %}</title>
+
+    <link rel="icon" type="image/ico" sizes="32x32" href="{{ asset('markup/favicon.ico') }}">
+
+    <link rel="stylesheet" href="{{ asset('markup/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('markup/css/main.css') }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script>window.jQuery || document.write('<script src="{{ asset('markup/js/jquery-3.3.1.min.js') }}" defer><\/script>')</script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous" defer></script>
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=23786727-bff3-48e0-8055-2ed88be87de9" defer> </script>
+
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<div id="wrapper">
+    <header id="header" class="header bg-black px-15 pl-lg-60 pr-lg-0 py-10 py-md-0 pr-md-0">
+        <nav class="navigation navbar navbar-expand-md p-0 m-0">
+            <a class="navbar-brand m-0 p-0" href="https://cyberturity.com.au"><img src="{{ asset('markup/images/logo.png') }}" alt="Cyberturity provides a real time cyber security maturity assessment and cyber security evaluation" width="225" height="36"></a>
+            <button class="navbar-toggler position-relative collapsed" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="bar position-absolute"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="nav">
+                <div class="navbar-holder py-10 py-md-0 d-md-flex align-items-md-start">
+                    <ul class="navbar-nav font-weight-bold flex-lg-wrap text-uppercase mb-10 mb-md-0 align-self-md-center px-md-40 pr-xl-65">
+                        <li class="mr-md-25 mr-xl-45">
+                            <a href="https://t2.cyberturity.com/provisioning/activate" target="_blank">Activate</a>
+                        </li>
+                        <li><a href="https://t2.cyberturity.com" target="_blank">Login</a></li>
+                    </ul>
+                    <a href="{{ path('info') }}" class="btn btn-primary font-weight-bold">Start here</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer id="footer" class="py-30 pt-md-40 pb-md-20">
+        <div class="container">
+            <div class="row text-center text-md-left pb-md-45">
+                <div class="col-md-3 col-xl-4 pb-20 pb-md-30">
+                    <div class="logo pt-md-2 px-xl-30">
+                        <a href="https://www.cybermetrix.com.au/" target="_blank"><img src="{{ asset('markup/images/cybermetrix-logo.png') }}" alt="Cybermetrix" width="240" height="380"></a>
+                    </div>
+                </div>
+                <div class="col-md-9 col-xl-8">
+                    <div class="footer-holder pt-10 pl-xl-80 pr-xl-60">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 pb-25 pb-md-30">
+                                <span class="title text-uppercase d-block mb-6 mb-md-20">North America</span>
+                                <address>
+                                    Suite 180 <br>
+                                    800 West El Camino Real <br>
+                                    Mountain View CA 94040 <br>
+                                    USA <br>
+                                </address>
+                            </div>
+                            <div class="col-md-6 col-lg-4 pb-25 pb-md-30">
+                                <span class="title text-uppercase d-block mb-6 mb-md-20">Asia / Pacific</span>
+                                <address>
+                                    Level 2 <br>
+                                    315 Brunswick Street <br>
+                                    Fortitude Valley QLD 4006 <br>
+                                    Australia <br>
+                                </address>
+                            </div>
+                            <div class="col-md-6 col-lg-4 pb-25 pb-md-30">
+                                <div class="logo mb-20">
+                                    <a href="https://cyberturity.com.au">
+                                        <img class="img-responsive" src="{{ asset('markup/images/logo.png') }}" alt="Cyberturity provides a real time cyber security maturity assessment and cyber security evaluation" width="218" height="36">
+                                    </a>
+                                </div>
+                                <span class="site-info ">
+										Cyberturity Pty Ltd <br>
+										ABN 62 612 457 244
+									</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="doc list-unstyled mb-0 pl-xl-30">
+                <li>
+                    &copy; Copyright 2020, All rights reserved. Cyberturity® is a trademark of Cyberturity Pty Ltd
+                </li>
+                <li>
+                    <a href="{{ path('terms') }}" target="_blank">Terms of Use</a>
+                </li>
+                <li>
+                    <a href="{{ path('privacy') }}" target="_blank">Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="video-holder">
+        <span class="video-close"><span class="icon-close"></span></span>
+        <iframe id="video" src="https://player.vimeo.com/video/371249053?quality=1080p"></iframe>
+    </div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171400006-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171400006-1');
+</script>
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>
